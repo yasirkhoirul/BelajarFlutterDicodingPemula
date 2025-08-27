@@ -50,7 +50,47 @@ class HomeScaffold extends StatelessWidget {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
-      body: Center(child: Text("hello world")),
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black,width: 3),
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.red,
+            //parameter shape digunakan untuk mengubah bentuk container
+            // shape: BoxShape.circle,
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.grey,
+                offset: Offset(3, 6),
+                blurRadius: 10,
+              )
+            ]
+          ),
+          width: 300,
+          height: 300,
+          margin: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("ini adalah baris pertama"),
+                  Icon(Icons.thumb_up)
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("ini adalah baris ke dua"),
+                  const Icon(Icons.thumb_down)
+                ],
+              )
+            ],
+          ),
+        ),
+      )
     );
   }
 }
