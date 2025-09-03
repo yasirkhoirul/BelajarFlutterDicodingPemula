@@ -84,7 +84,7 @@ class InputControllers extends StatefulWidget {
 }
 
 class _InputControllers extends State {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
