@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue)
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+      fontFamily: 'Poppins'
     );
 
     return MaterialApp(
@@ -76,7 +77,7 @@ class HomeScaffold extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text("ini adalah baris pertama"),
+                  const Text("ini adalah baris pertama",style: TextStyle(fontWeight: FontWeight.bold),),
                   Icon(Icons.thumb_up)
                 ],
               ),
